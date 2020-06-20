@@ -1,0 +1,32 @@
+# config.yaml file
+
+########################################################################################################################
+# space 
+########################################################################################################################
+lx: 5120    # length (meter) of dom in the streamwise dir 
+ly: 5120    # length (meter) of dom in the spanwise dir
+lz: 1280    # length (meter) of dom in the wall-normal dir
+
+nx: 128     # number of grid points in the streamwise dir 
+ny: 128     # number of grid points in the spanwise dir
+nz: 128     # number of grid points in the wall-normal dir
+
+########################################################################################################################
+# time (dt=dtr*u_star/z_i, dtr=dt*z_i/u_star)
+########################################################################################################################
+dtr: 1.0		# dimensional timestep (s)
+nsteps: 40000	# total number of timesteps
+
+########################################################################################################################
+# wall condition
+########################################################################################################################
+zo: 0.1		    # prescribed rougness length (TO BE REPLACE BY A MAP)
+u_fric: 0.45	# sqrt wall shear = sqrt(tau_0)
+
+########################################################################################################################
+# sgs
+########################################################################################################################
+model: 3		# 1 = smag, 2 = la-dyn, 3 = lasd
+fgr: 1.5		# ratio of filter to grid
+tfr: 2.0		# ratio of test filter to grid filter
+cs_count: 3		# frequency of sgs coefficients update
